@@ -276,7 +276,36 @@ graphs). Using these three graphs to discuss which of these three
 categorical variables seems to be contributing more to these two peaks
 and explain your reasoning.
 
-**Response**:
+``` r
+ggplot(data = penguins, mapping = aes(x = bill_length_mm, y = species)) +
+geom_boxplot()
+```
+
+    ## Warning: Removed 2 rows containing non-finite values (stat_boxplot).
+
+![](activity02-ggplot2-intro_files/figure-gfm/bill_length_by_species-1.png)<!-- -->
+
+``` r
+ggplot(data = penguins, mapping = aes(x = bill_length_mm, y = sex)) +
+geom_boxplot()
+```
+
+    ## Warning: Removed 2 rows containing non-finite values (stat_boxplot).
+
+![](activity02-ggplot2-intro_files/figure-gfm/bill_length_by_sex-1.png)<!-- -->
+
+``` r
+ggplot(data = penguins, mapping = aes(x = bill_length_mm , y = island )) +
+geom_boxplot()
+```
+
+    ## Warning: Removed 2 rows containing non-finite values (stat_boxplot).
+
+![](activity02-ggplot2-intro_files/figure-gfm/bill_length_by_island-1.png)<!-- -->
+
+**Response**: the type of species and the island that they are found may
+have led to the peaks in the graphs because the two factors also lead to
+longer bill lengths as seen in the box plots.
 
 Knit, then stage everything listed in your **Git** pane, commit (with a
 meaningful commit message), and push to your GitHub repo. Go to GitHub
